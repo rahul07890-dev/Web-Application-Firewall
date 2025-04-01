@@ -6,7 +6,7 @@ This Java-based Web Application Firewall (WAF) provides protection for web appli
 ---
 
 ## Features
-- **SQL Injection Detection: Detects and blocks SQL injection attempts.
+- SQL Injection Detection: Detects and blocks SQL injection attempts.
 - **XSS Protection: Blocks malicious scripts designed to execute in the user's browser.
 - **CSRF Protection: Prevents unauthorized actions from being performed on behalf of authenticated users.
 - **Custom Security Rules: Users can define custom rules to enhance security based on specific needs.
