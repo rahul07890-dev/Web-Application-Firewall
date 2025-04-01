@@ -15,10 +15,10 @@ This Java-based Web Application Firewall (WAF) provides protection for web appli
 ---
 
 ## Technologies Used
-- **Java: For implementing the WAF’s core logic.
-- **Servlets & JSP: For handling HTTP requests and responses.
-- **Regex & Pattern Matching: For identifying malicious content in requests.
-- **web.xml: For servlet filter configuration.
+- Java: For implementing the WAF’s core logic.
+- Servlets & JSP: For handling HTTP requests and responses.
+- Regex & Pattern Matching: For identifying malicious content in requests.
+- web.xml: For servlet filter configuration.
 
 ---
 
@@ -26,7 +26,6 @@ This Java-based Web Application Firewall (WAF) provides protection for web appli
 1.**Clone the Repository**:
 
  ```bash
-Copy code
 git clone https://github.com/rahul07890-dev/Web-Application-Firewall.git
 cd Web-Application-Firewall
 ```
@@ -47,10 +46,10 @@ WAFProject/
 ```
 
 ##Future Enhancements
-- **Advanced Security Rules: Add more sophisticated detection for new web vulnerabilities.
-- **Performance Optimization: Improve filtering and logging mechanisms for better performance.
-- **UI Improvements: Enhance the frontend for a more user-friendly experience.
-- **Additional Threat Protection: Integrate protection against other types of web attacks.
+- Advanced Security Rules: Add more sophisticated detection for new web vulnerabilities.
+- Performance Optimization: Improve filtering and logging mechanisms for better performance.
+- UI Improvements: Enhance the frontend for a more user-friendly experience.
+- Additional Threat Protection: Integrate protection against other types of web attacks.
 
 ---
 
@@ -65,5 +64,5 @@ This project is licensed under the Apache License 2.0. See the LICENSE file for 
 ---
 
 ## Acknowledgments
-- **Java Documentation: For guidance on servlet programming and request handling.
-- **Open-Source Community: For tools and inspiration to build secure applications.
+- Java Documentation: For guidance on servlet programming and request handling.
+- Open-Source Community: For tools and inspiration to build secure applications.
