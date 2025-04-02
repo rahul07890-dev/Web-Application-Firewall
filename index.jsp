@@ -5,7 +5,7 @@
 </head>
 <body>
     <h2>Try Entering Malicious Input</h2>
-    <form method="GET" action="">
+    <form method="GET" action="filter">
         <input type="text" name="user_input" placeholder="Type SQL, XSS, or CSRF payloads" required>
         <button type="submit">Submit</button>
     </form>
