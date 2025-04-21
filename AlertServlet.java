@@ -28,7 +28,7 @@ public class AlertServlet extends HttpServlet {
         String smtpHost = "smtp.gmail.com";
         String smtpPort = "587";
         final String smtpUser = "manthanrahul85@gmail.com";      // 📍 Change this
-        final String smtpPass = "stvl dngi syca aaek";   // 📍 Change this
+        final String smtpPass = "";   // 📍 Change this
 
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
