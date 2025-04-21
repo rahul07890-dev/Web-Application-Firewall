@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureGuard - Web Application Firewall</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #0f172a;
+            color: white;
+            padding: 20px 40px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 800;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero {
+            padding: 80px 40px;
+            background: linear-gradient(to right, #3b82f6, #1e3a8a);
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            background-color: white;
+            color: #1e3a8a;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e0e7ff;
+        }
+
+        .section {
+            padding: 60px 40px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            background-color: #f3f4f6;
+            padding: 20px;
+            border-radius: 12px;
+            width: 280px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 20px 40px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">SecureGuard</div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Next-Gen Web Application Firewall</h1>
+        <p>Protect your web apps from threats like SQL injection, XSS, CSRF, and more — in real time.</p>
+        <button class="cta-button">Get Started</button>
+    </section>
+
+    <section class="section">
+        <h2>Why Choose SecureGuard?</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Real-Time Protection</h3>
+                <p>Detect and block malicious activity before it reaches your backend.</p>
+            </div>
+            <div class="feature">
+                <h3>Easy Integration</h3>
+                <p>Plug-and-play security for any Java-based web application without complex setup.</p>
+            </div>
+            <div class="feature">
+                <h3>Live Monitoring</h3>
+                <p>View logs, alerts, and detailed reports from a clean dashboard.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 SecureGuard. All rights reserved.
+    </footer>
+
+</body>
+</html>
