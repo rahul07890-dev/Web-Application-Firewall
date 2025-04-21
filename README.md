@@ -1,18 +1,7 @@
 # Web Application Firewall (WAF)
 
 ## Overview
-This Java-based Web Application Firewall (WAF) provides protection for web applications by inspecting and filtering incoming HTTP requests to detect and block malicious traffic such as SQL Injection, Cross-Site Scripting (XSS), and Cross-Site Request Forgery (CSRF). The WAF applies predefined security rules to protect web applications from common web vulnerabilities.
-
----
-
-## Features
-- SQL Injection Detection: Detects and blocks SQL injection attempts.
-- XSS Protection: Blocks malicious scripts designed to execute in the user's browser.
-- CSRF Protection: Prevents unauthorized actions from being performed on behalf of authenticated users.
-- Custom Security Rules: Users can define custom rules to enhance security based on specific needs.
-- Request Logging: Logs and provides detailed information about blocked requests for security auditing.
-  
----
+A basic Java-based Web Application Firewall (WAF) prototype that filters HTTP requests, detects malicious inputs, and logs security events. This application also integrates email alerting and request logging functionality.
 
 ## Technologies Used
 - Java: For implementing the WAF’s core logic.
@@ -22,39 +11,128 @@ This Java-based Web Application Firewall (WAF) provides protection for web appli
 
 ---
 
-## Installation
-1.**Clone the Repository**:
-
- ```bash
-git clone https://github.com/rahul07890-dev/Web-Application-Firewall.git
-cd Web-Application-Firewall
-```
-2.**Build and deploy the project in a Java web container (e.g., Tomcat)**
-3.**Access the application via the browser at http://localhost:8080**
-
 ## Directory Structure
 ```
-WAFProject/
-│── src/main/java/
-│   └── com/waf/
-│       ├── WafFilter.java # Core WAF filtering logic
-│── WebContent/
-│   ├── index.jsp # Main HTML page for the application
-│── WEB-INF/
-│   ├── web.xml # Servlet configuration
+WebApplicationFirewall/
+├── Web Pages/
+│   ├── META-INF/
+│   ├── WEB-INF/
+│   ├── index.html
+│   ├── mail_failure.jsp
+│   ├── mail_success.jsp
+│   └── requestLogs.jsp
+├── Source Packages/
+│   └── com/
+│       └── myapp/
+│           └── webappfirewall/
+│               ├── resources/
+│               │   ├── AlertServlet.java
+│               │   ├── SecurityFilter.java
+│               │   └── TestServlet.java
+│               └── utils/
+│                   └── DBLogger.java
+├── Test Packages/
+│   └── <default package>/
+├── Libraries/
+│   ├── mysql-connector-j-9.1.0.jar
+│   ├── mysql-connector-j-8.3.0.jar
+│   ├── jakarta.mail-api-2.1.2.jar
+│   ├── jakarta.mail-2.0.1.jar
+│   ├── jakarta.activation-api-2.1.1.jar
+│   └── jakarta.activation-2.0.1.jar
+├── Test Libraries/
+│   └── Apache Tomcat or TomEE (embedded)
+└── Configuration Files/
+
 
 ```
 
-##Future Enhancements
-- Advanced Security Rules: Add more sophisticated detection for new web vulnerabilities.
-- Performance Optimization: Improve filtering and logging mechanisms for better performance.
-- UI Improvements: Enhance the frontend for a more user-friendly experience.
-- Additional Threat Protection: Integrate protection against other types of web attacks.
+##  Requirements
+
+- **JDK 20**
+- **Apache Tomcat or TomEE** (configured as your server)
+- **MySQL database** (for logging suspicious activities)
+- Compatible IDE: **NetBeans** recommended
+
+---
+
+##  Dependencies
+
+Ensure the following JARs are available in your `Libraries`:
+- MySQL Connector (`mysql-connector-j-*.jar`)
+- Jakarta Mail API (`jakarta.mail-api`, `jakarta.mail`)
+- Jakarta Activation (`jakarta.activation-api`, `jakarta.activation`)
+
+---
+
+##  How It Works
+
+### Core Components:
+
+- **SecurityFilter.java**  
+  Intercepts incoming requests and performs basic filtering/suspicious pattern detection.
+
+- **AlertServlet.java**  
+  Sends alerts via email when a potential threat is detected.
+
+- **DBLogger.java**  
+  Handles logging of suspicious activity into a MySQL database.
+
+- **requestLogs.jsp**  
+  Displays logs from the database in a user-friendly format.
+
+- **mail_success.jsp / mail_failure.jsp**  
+  Confirmation views for alert email status.
+
+- **TestServlet.java**  
+  Simple test servlet to verify functionality.
+
+---
+## Setup Instructions
+
+1. **Clone this repo** or download the project folder.
+
+```bash
+
+git clone https://github.com/rahul07890-dev/Web-Application-Firewall.git
+
+```
+2. **Database Setup**:
+    - Create a MySQL database and a table for logging.
+    - Update DB credentials inside `DBLogger.java`.
+
+3. **Configure Mail Settings**:
+    - Set your SMTP settings inside `AlertServlet.java`.
+
+4. **Deploy to Tomcat/TomEE**:
+    - Build and deploy the project using NetBeans or manually drop the WAR into Tomcat’s `webapps` folder.
+
+5. **Run**:
+    - Access `index.html` via `http://localhost:8080/WebApplicationFirewall/`.
+
+---
+
+##  Features
+
+- Servlet Filter-based request scanning
+- Database logging of suspicious activity
+- Email alerts for potential threats
+- Basic JSP interface for log viewing
+
+---
+
+##  TODO / Improvements
+
+- Add more robust pattern detection
+- Integrate CAPTCHA
+- Role-based access for log viewers
+- Log sanitization and encoding
 
 ---
 
 ## Contribution
-Contributions are welcome! Feel free to fork this repository, create a branch, and submit a pull request with your improvements or new features.
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you’d like to change.
 
 ---
 
